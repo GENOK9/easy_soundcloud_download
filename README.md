@@ -1,9 +1,9 @@
 # ESC
-# by Adrian Friedrich Jaeschke
-# Requirements:
-# Flet Version: 0.28.3
-# Python Version: 3.13.5
-# webview_flutter_android: 3.16.9 !! No Higher version supported by flet
+## by Adrian Friedrich Jaeschke
+## Requirements:
+## Flet Version: 0.28.3
+## Python Version: 3.13.5
+## webview_flutter_android: 3.16.9 !! No Higher version supported by flet
 
 ## Run the app
 
