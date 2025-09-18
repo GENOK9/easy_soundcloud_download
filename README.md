@@ -10,16 +10,13 @@
 ### uv
 
 Run as a desktop app:
+```
+```
+pip install yt-dlp
+```
+
 
 ```
-#from /src:
-flet run app.py
-### Poetry
-
-Install dependencies from `pyproject.toml`:
-
-```
-poetry install
 pip install yt-dlp
 ```
 
