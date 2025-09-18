@@ -11,13 +11,15 @@
 
 Run as a desktop app:
 ```
-```
-pip install yt-dlp
+#from /src:
+flet run app.py
 ```
 
-
 ```
 pip install yt-dlp
+
+```
+
 ```
 
 For more details on running the app, refer to the [Getting Started Guide](https://flet.dev/docs/getting-started/).
