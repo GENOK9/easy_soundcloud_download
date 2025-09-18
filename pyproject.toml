@@ -1,0 +1,60 @@
+[project]
+name = "esc-linux"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Flet developer", email = "you@example.com" }
+]
+dependencies = [
+  "flet==0.28.3",
+  "yt-dlp>=2024.0.0"
+
+]
+
+[tool.flet.flutter.pubspec.dependency_overrides]
+webview_flutter = "4.7.0"
+webview_flutter_android = "4.10.1"
+
+[tool.flet]
+# org name in reverse domain name notation, e.g. "com.mycompany".
+# Combined with project.name to build bundle ID for iOS and Android apps
+entrypoint = "src/app.py"
+
+# project display name that is used as an app title on Android and iOS home screens,
+# shown in window titles and about app dialogs on desktop.
+product = "ESC_Download"
+
+# company name to display in about app dialogs
+company = "BBB"
+
+# copyright text to display in about app dialogs
+copyright = "Copyright (C) 2025 by Adrian Friedrich Jaeschke"
+
+
+[tool.uv]
+dev-dependencies = [
+    "flet[all]==0.28.3",
+]
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.14"
+flet = "*"
+yt-dlp = "*"
+
+[tool.poetry.group.dev.dependencies]
+flet = {extras = ["all"], version = "0.28.3"}
+
+[tool.flet.android]
+min_sdk_version = 21
+target_sdk_version = 34
+abi_filters = ["arm64-v8a"]
+
+[tool.flet.android.permission] # --android-permissions
+"android.permission.READ_EXTERNAL_STORAGE" = true
+"android.permission.WRITE_EXTERNAL_STORAGE" = true
+"android.permission.INTERNET" = true
