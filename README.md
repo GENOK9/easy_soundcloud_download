@@ -29,12 +29,9 @@ flet build apk --module-name app.py
 For more details on building and signing `.apk` or `.aab`, refer to the [Android Packaging Guide](https://flet.dev/docs/publish/android/).
 
 
-### Linux (Forces webview_flutter_android ^4.0.0)
-#### flet supports webview_flutter_android 3.16.9 or Lower
-#### the build command changes flutteres pubslec.yamls webview_flutter_android ^3.16.9 entry to webview_flutter_android = ^4.0.0 which can not build
-#### to run on Linux please refer to the run command:
+### Linux
 
 ```
-flet run src/app.py
+flet build linux --module-name app.py
 ```
 building Windows package, refer to the [Windows Packaging Guide](https://flet.dev/docs/publish/windows/).

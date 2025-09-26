@@ -15,7 +15,7 @@ dependencies = [
 
 [tool.flet.flutter.pubspec.dependency_overrides]
 webview_flutter = "4.7.0"
-webview_flutter_android = "4.10.1"
+webview_flutter_android = "3.16.9"
 
 [tool.flet]
 # org name in reverse domain name notation, e.g. "com.mycompany".
@@ -58,6 +58,3 @@ abi_filters = ["arm64-v8a"]
 "android.permission.READ_EXTERNAL_STORAGE" = true
 "android.permission.WRITE_EXTERNAL_STORAGE" = true
 "android.permission.INTERNET" = true
-
-[tool.flet.flutter.pubspec.dependency_overrides]
-webview_flutter_android = "3.16.9"
