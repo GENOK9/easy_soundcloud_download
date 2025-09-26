@@ -48,7 +48,7 @@ def resolve(url: str) -> Dict[str, Optional[str]]:
     title = info.get("title")
     uploader = info.get("uploader") or info.get("artist") or info.get("uploader_id")
     thumbnail = info.get("thumbnail")
-    ext = (info.get("ext") or "").lstrip(".")
+    ext = (info.get("ext") or "m4a").lstrip(".")
     if not ext:
         ext = _guess_ext_from_formats(info) or "mp3"
 

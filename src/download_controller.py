@@ -125,7 +125,7 @@ class DownloadController:
             item.title = info.get("title") or item.title
             item.uploader = info.get("uploader") or info.get("artist") or item.uploader
             item.image_url = info.get("thumbnail") or item.image_url
-            item.ext = (info.get("ext") or "mp3").lstrip(".")
+            item.ext = (info.get("ext") or "m4a").lstrip(".")
 
             #Dateipfad bilden (künstler_-_titelname.ext)
             out_path = self._make_output_path(
@@ -216,7 +216,7 @@ class DownloadController:
         else:
             stem = artist_s or title_s or "track"
 
-        extension = ext.lstrip(".") or "mp3"
+        extension = ext.lstrip(".") or "m4a"
         candidate = base_dir / f"{stem}.{extension}"
         if not candidate.exists():
             return candidate

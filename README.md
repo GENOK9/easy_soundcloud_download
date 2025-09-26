@@ -1,39 +1,19 @@
-# EscLinux app
+# ESC for Android and Linux
+#### Adrian Friedrich Jaeschke
+
+### Optimal Requirements:
+#### flet 0.28.3
+#### python 3.13.5
+#### webview_flutter_android: 3.16.9 !! No Higher version supported by flet
 
 ## Run the app
 
-### uv
+###
 
 Run as a desktop app:
 
 ```
-uv run flet run
-```
-
-Run as a web app:
-
-```
-uv run flet run --web
-```
-
-### Poetry
-
-Install dependencies from `pyproject.toml`:
-
-```
-poetry install
-```
-
-Run as a desktop app:
-
-```
-poetry run flet run
-```
-
-Run as a web app:
-
-```
-poetry run flet run --web
+flet run src/app.py
 ```
 
 For more details on running the app, refer to the [Getting Started Guide](https://flet.dev/docs/getting-started/).
@@ -41,41 +21,20 @@ For more details on running the app, refer to the [Getting Started Guide](https:
 ## Build the app
 
 ### Android
-
 ```
-flet build apk -v
+cd src/
+flet build apk --module-name app.py 
 ```
 
 For more details on building and signing `.apk` or `.aab`, refer to the [Android Packaging Guide](https://flet.dev/docs/publish/android/).
 
-### iOS
+
+### Linux (Forces webview_flutter_android ^4.0.0)
+#### flet supports webview_flutter_android 3.16.9 or Lower
+#### the build command changes flutteres pubslec.yamls webview_flutter_android ^3.16.9 entry to webview_flutter_android = ^4.0.0 which can not build
+#### to run on Linux please refer to the run command:
 
 ```
-flet build ipa -v
+flet run src/app.py
 ```
-
-For more details on building and signing `.ipa`, refer to the [iOS Packaging Guide](https://flet.dev/docs/publish/ios/).
-
-### macOS
-
-```
-flet build macos -v
-```
-
-For more details on building macOS package, refer to the [macOS Packaging Guide](https://flet.dev/docs/publish/macos/).
-
-### Linux
-
-```
-flet build linux -v
-```
-
-For more details on building Linux package, refer to the [Linux Packaging Guide](https://flet.dev/docs/publish/linux/).
-
-### Windows
-
-```
-flet build windows -v
-```
-
-For more details on building Windows package, refer to the [Windows Packaging Guide](https://flet.dev/docs/publish/windows/).
+building Windows package, refer to the [Windows Packaging Guide](https://flet.dev/docs/publish/windows/).

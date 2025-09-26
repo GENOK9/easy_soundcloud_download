@@ -126,7 +126,7 @@ def main(page: ft.Page):
         from pathlib import Path
 
         debug_text = []
-        debug_text.append(f"Arbeitsverzeichnis: {os.getcwd()}")
+        debug_text.append(f"Working Directory: {os.getcwd()}")
         debug_text.append(f"__file__ (main): {__file__}")
         debug_text.append(f"FLET_PLATFORM: {os.getenv('FLET_PLATFORM')}")
 
@@ -150,7 +150,7 @@ def main(page: ft.Page):
             else:
                 debug_text.append(f"✗ {src}")
 
-        debug_text.append(f"ffmpeg in projekt ausführbar: {os.access("/data/data/com.flet.src/files/ffmpeg", os.X_OK)}")
+        debug_text.append(f"ffmpeg Executable: {os.access("/data/data/com.flet.src/files/flet/app/ffmpeg", os.X_OK)}")
 
         debug_info = "\n".join(debug_text)
 

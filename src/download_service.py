@@ -8,7 +8,7 @@ import shutil
 
 """
 Lädt den SoundCloud-Track nach out_path.
-- out_path: system music ordner/ESC/filename.mp3
+- out_path: system music ordner/ESC/filename.ext
 """
 
 
@@ -75,6 +75,7 @@ def download(
         "postprocessors": [
             {
                 "key": "FFmpegExtractAudio",
+                "preferredcodec": "mp3",
                 "preferredquality": "0",
             }
         ],
